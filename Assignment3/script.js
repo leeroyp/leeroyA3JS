@@ -5,8 +5,6 @@ var gBtn = document.getElementById('generateBtn')
 gBtn.addEventListener('click', writePassword)
 
 
-
-
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -65,25 +63,18 @@ function generatePassword() {
   if (numbers === true) {
     minimumNumbers = functionArray.getNumbers();
     minimumCount++;
-
   }
-
   if (lowerCases === true) {
     minimumLowerCases = functionArray.getLowerCases();
     minimumCount++;
-
   }
-
   if (upperCases === true) {
     minimumUpperCases = functionArray.getUpperCases();
     minimumCount++;
-
   }
-
   if (special === true) {
     minimumSpecialCharacters = functionArray.getSpecialCharacters();
     minimumCount++;
-
   }
 
   // empty string variable for the for loop below
@@ -91,9 +82,9 @@ function generatePassword() {
 
   // loop getting random characters
   for (let i = 0; i < (parseInt(passwordLength) - minimumCount); i++) {
-    // var randomNumberPicked = Math.floor(Math.random() * 4);
+    var randomNumberPicked = Math.floor(Math.random() * 4);
 
-    // randomPasswordGenerated += randomNumberPicked;
+    randomPasswordGenerated += randomNumberPicked;
 
   }
 
